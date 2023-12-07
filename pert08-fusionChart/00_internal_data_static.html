@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      type="text/javascript"
+      src="fusionchart/js/fusioncharts.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="fusionchart/js/themes/fusioncharts.theme.fint.js"
+    ></script>
+    <script>
+      FusionCharts.ready(function () {
+        var grafik01 = new FusionCharts({
+          type: "column2d",
+          renderAt: "lokasi01",
+          width: "500",
+          height: "300",
+          dataFormat: "json",
+          dataSource: {
+            chart: {
+              caption: "Monthly revenue",
+              subCaption: "TRPL Mart",
+              xAxisName: "Month",
+              yAxisName: "Revenues",
+              theme: "fint",
+            },
+            data: [
+              {
+                label: "Jan",
+                value: "420000",
+              },
+              {
+                label: "Feb",
+                value: "810000",
+              },
+              {
+                label: "Mar",
+                value: "720000",
+              },
+              {
+                label: "Apr",
+                value: "550000",
+              },
+              {
+                label: "May",
+                value: "910000",
+              },
+            ],
+            trendlines: [
+              {
+                line: [
+                  {
+                    startvalue: "700000",
+                    valueOnRight: "1",
+                    displayvalue: "Monthly Target",
+                  },
+                ],
+              },
+            ],
+          },
+        });
+        grafik01.render();
+      });
+    </script>
+    <title>Grafik Static</title>
+  </head>
+  <body>
+    <div id="lokasi01">nanti chart di sini</div>
+  </body>
+</html>

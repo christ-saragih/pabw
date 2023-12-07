@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script
+      type="text/javascript"
+      src="fusionchart/js/fusioncharts.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="fusionchart/js/themes/fusioncharts.theme.fint.js"
+    ></script>
+    <script>
+      FusionCharts.ready(function () {
+        var grafik01 = new FusionCharts({
+          type: "column2d",
+          renderAt: "lokasi01",
+          width: "500",
+          height: "300",
+          dataFormat: "jsonurl",
+          dataSource: "data_json.php",
+        });
+        grafik01.render();
+      });
+    </script>
+    <title>Grafik Static dari File External</title>
+  </head>
+  <body>
+    <div id="lokasi01">nanti chart di sini</div>
+  </body>
+</html>
